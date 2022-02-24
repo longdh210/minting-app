@@ -1,0 +1,1 @@
+export const tokenaddress = "0x535a939aC42F70954FFd8204d384f56b032ddE0f"

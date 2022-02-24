@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { Routes, Route, Link } from 'react-router-dom';
+import MintNft from './pages/mint-nft';
+import DisplayNFT from './pages/display-nft';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link className='page' to="/">Minting</Link>
+            <Link className='page' to="/displayNFT">NFT</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<MintNft />} />
+        <Route path="/displayNFT" element={<DisplayNFT />} />
+      </Routes>
     </div>
   );
 }
